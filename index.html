@@ -56,9 +56,9 @@
   const button = document.getElementById("button");
   const modal = document.getElementById("mymodal");
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-  });
+  // form.addEventListener("submit", (event) => {
+  //   event.preventDefault();
+  // });
 
   modal.addEventListener("click", closemodal);
   function closemodal(event) {
@@ -69,6 +69,7 @@
 
   button.addEventListener("click", openmodal);
   function openmodal(event) {
+    event.preventDefault();
     modal.style.display = "flex";
   }
   var swiper = new Swiper('.swiper-container', {
